@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-Regular.eot');
+    src: local('Inter Regular'), local('Inter-Regular'),
+        url('../assets/font/Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Inter-Regular.woff2') format('woff2'),
+        url('../assets/font/Inter-Regular.woff') format('woff'),
+        url('../assets/font/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-Medium.eot');
+    src: local('Inter Medium'), local('Inter-Medium'),
+        url('../assets/font/Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Inter-Medium.woff2') format('woff2'),
+        url('../assets/font/Inter-Medium.woff') format('woff'),
+        url('../assets/font/Inter-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-SemiBold.eot');
+    src: local('Inter Semi Bold'), local('Inter-SemiBold'),
+        url('../assets/font/Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Inter-SemiBold.woff2') format('woff2'),
+        url('../assets/font/Inter-SemiBold.woff') format('woff'),
+        url('../assets/font/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/font/Inter-Bold.eot');
+    src: local('Inter Bold'), local('Inter-Bold'),
+        url('../assets/font/Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/font/Inter-Bold.woff2') format('woff2'),
+        url('../assets/font/Inter-Bold.woff') format('woff'),
+        url('../assets/font/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

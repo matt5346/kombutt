@@ -1,0 +1,30 @@
+.layoutBg {
+  width: 100%;
+  object-fit: cover;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 10vw;
+    content: "";
+    width: 50%;
+    height: 16vh;
+    border-radius: 657.18px;
+    filter: blur(200px);
+    background: linear-gradient(270deg, #FFBF1C 0%, #FF842C 100%);
+    mix-blend-mode: saturation;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 10vw;
+    content: "";
+    width: 50%;
+    height: 16vh;
+    border-radius: 657.18px;
+    filter: blur(200px);
+    background: linear-gradient(90deg, #7216E8 0%, #8B16E8 100%);
+    mix-blend-mode: saturation;
+  }
+}

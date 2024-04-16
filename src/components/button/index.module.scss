@@ -1,0 +1,93 @@
+.button {
+  @apply relative flex items-center justify-center text-white;
+  @apply px-3 py-2 rounded-[8px] text-sm font-medium transition-all;
+  backdrop-filter: blur(15px);
+  transition: opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.full {
+  @apply w-full;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.custom {
+  max-height: fit-content;
+}
+
+.xs {
+  height: 34px;
+}
+
+.sm {
+  /* @apply px-2 py-1 min-h-[20px] text-xs font-normal; */
+  height: 42px;
+}
+
+.md {
+  height: 48px;
+}
+
+.lg {
+  height: 56px;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button:disabled {
+  pointer-events: none;
+  @apply opacity-60;
+}
+
+.spinner_btn {
+  @apply text-xl mr-2;
+}
+
+.primary {
+  @apply text-white;
+}
+
+.gradient {
+  background: linear-gradient(270deg, #38a0ff 0%, #882cff 100%);
+}
+
+.green {
+  background: linear-gradient(270deg, #1ed800 0%, #299f00 100%);
+}
+
+.secondary {
+  @apply text-white;
+}
+
+.success {
+  @apply text-white;
+}
+
+.transparent {
+  @apply text-white;
+  background-color: transparent;
+}
+
+.greyBg {
+  background-color: rgb(var(--input-default));
+}
+
+.grey {
+  border: 1px solid rgb(var(--body-default));
+}
+
+.white {
+  border: 1px solid rgb(var(--white));
+}
+
+.inverse.secondary {
+  @apply bg-input-default;
+}
+
+.inverse.primary {
+  @apply bg-input-light;
+}

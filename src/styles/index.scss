@@ -1,0 +1,60 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "./fonts.scss";
+@import "./globals.scss";
+@import "./theme-black.scss";
+
+$root-font-size-sm: 13px;
+
+// using rem font size only for mobile, no need for dekstop
+html {
+  @media (max-width: 451px) {
+    font-size: $root-font-size-sm * 1.01 * 100vw / 320px;
+    /* font-size: 16px; */
+  }
+
+  scroll-margin-top: 200px;
+}
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+
+    @apply w-screen bg-body-default text-white;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+#__next {
+  @apply w-full lg:w-screen md:h-screen;
+  @apply flex flex-col;
+}
+
+ul li {
+  list-style: none;
+}
+
+.rc-notification {
+  min-width: 320px;
+}
+
+.rc-notification-notice {
+  margin-right: 12px !important;
+  backdrop-filter: blur(10px);
+  padding: 0 !important;
+  background: unset !important;
+}
+
+svg {
+  transition: fill 0.15s ease, transform 0.15s ease;
+}

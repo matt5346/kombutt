@@ -1,0 +1,77 @@
+.listGroupItem {
+  position: relative;
+  padding: 24px;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+
+  &.listExpanded {
+    padding: 24px 24px 32px 24px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 16px;
+  }
+}
+
+.sm {
+  padding: 16px;
+
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  &.listExpanded {
+    padding: 16px 16px 24px 16px;
+  }
+}
+
+.primary {
+  background-color: rgb(var(--bg-primary));
+
+  &:hover {
+    background-color: rgb(var(--input-default));
+  }
+}
+
+.secondary {
+  background-color: rgb(var(--input-default));
+
+  &:hover {
+    background-color: rgb(var(--input-light));
+  }
+}
+
+.listExpanded {
+  &:hover {
+    background-color: rgb(var(--input-default));
+  }
+}
+
+.arrow {
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+.isExpanded {
+  transform: rotate(-180deg);
+}
+
+.collapseBlock {
+  overflow: hidden;
+  color: rgb(var(--body-default));
+  font-size: 16px;
+  transition: height 0.15s ease;
+  
+  .is-expanded & {
+    margin-top: 24px;
+  }
+
+  p {
+    @apply mb-2 pt-2;
+  }
+}
