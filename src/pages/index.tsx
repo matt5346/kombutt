@@ -1,3 +1,5 @@
+/* eslint-disable react/style-prop-object */
+/* eslint-disable jsx-a11y/iframe-has-title */
 import Image from "next/image";
 import styles from "./index.module.scss";
 import Container from "@/components/layout/container";
@@ -16,6 +18,7 @@ import Card4 from "@/assets/common/card4.png";
 import road1 from "@/assets/common/roadmap1.png";
 import road2 from "@/assets/common/roadmap2.png";
 import road3 from "@/assets/common/roadmap1.png";
+import { useState } from "react";
 
 const roadmapSlider = [
   {
@@ -36,6 +39,8 @@ const roadmapSlider = [
 ];
 
 const Home = () => {
+  const [showWidget, setShowWidget] = useState<boolean>(false);
+
   return (
     <div className="w-full">
       <div className="w-full mb-40">
@@ -43,13 +48,30 @@ const Home = () => {
           <div className={styles.content}>
             <h1>Choose Your Destiny</h1>
             <p>Join Kombutt in the ultimate crypto combat!</p>
-            <Button className="mt-10" type="primary">
+            <Button
+              className="mt-10"
+              type="primary"
+              onClick={() => setShowWidget(true)}
+            >
               Get Kombutt
             </Button>
           </div>
         </Container>
         <Image className={styles.preview} alt="main" src={MainPreview} />
       </div>
+
+      {showWidget && (
+        <div className={styles.iframe}>
+          <iframe src="https://widget.venombridge.com/widget.html" />
+          <Button
+            className={styles.close}
+            type="primary"
+            onClick={() => setShowWidget(false)}
+          >
+            Close
+          </Button>
+        </div>
+      )}
 
       <Container>
         <div className="flex items-start gap-12">
@@ -111,6 +133,17 @@ const Home = () => {
 
       <div className={styles.footer}>
         <Image className={styles.footerImg} alt="main" src={Footer} />
+
+        <Container>
+          <Button
+            className={styles.getBig}
+            type="primary"
+            onClick={() => setShowWidget(true)}
+          >
+            Get Kombutt
+          </Button>
+        </Container>
+
         <div className={styles.footerLinks}>
           <Container>
             <div className={styles.linkItem}>

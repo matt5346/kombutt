@@ -160,3 +160,39 @@
 .linkItem {
   margin-top: 50px;
 }
+
+.iframe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 80vw;
+  height: 80vh;
+
+  iframe {
+    min-height: 80vh;
+    min-width: 80vw;
+  }
+}
+
+.close {
+  position: absolute !important;
+  bottom: 20px;
+  right: 20px;
+}
+
+.getBig {
+  position: absolute !important;
+  bottom: 50px;
+  width: 100% !important;
+  height: 250px !important;
+  font-size: 120px !important;
+  font-weight: 700;
+  line-height: 100px;
+  border-radius: 1000px !important;
+  white-space: nowrap;
+}
