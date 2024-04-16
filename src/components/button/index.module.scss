@@ -1,7 +1,10 @@
 .button {
   @apply relative flex items-center justify-center text-white;
-  @apply px-3 py-2 rounded-[8px] text-sm font-medium transition-all;
+  @apply px-3 py-2 rounded-[24px] text-sm font-medium transition-all;
   backdrop-filter: blur(15px);
+  padding: 8px 24px;
+  font-size: 20px;
+  text-transform: uppercase;
   transition: opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -49,6 +52,7 @@
 
 .primary {
   @apply text-white;
+  background-color: #e24146;
 }
 
 .gradient {

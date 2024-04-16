@@ -19,13 +19,14 @@ html {
 
 @layer base {
   html {
-    font-family: "Inter", sans-serif;
+    font-family: "Comic Neue", cursive;
   }
 
   body {
-    font-family: "Inter", sans-serif;
+    font-family: "Comic Neue", cursive;
 
-    @apply w-screen bg-body-default text-white;
+    @apply w-screen bg-white;
+    color: #0a0a0a;
   }
 
   input[type="number"]::-webkit-inner-spin-button,

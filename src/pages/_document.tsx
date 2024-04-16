@@ -52,6 +52,12 @@ export default function Document() {
         />
         <meta name="twitter:title" content="Alien bets" />
         <meta name="twitter:description" content="Alien bets" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@400;500;700;800&family=Red+Hat+Display:wght@400;500;600;700&family=Ubuntu:wght@300;400;700&display=swap"
+          rel="stylesheet"
+        />
         {/* <meta name="twitter:image" content="/images/preview_link.png" /> */}
       </Head>
 

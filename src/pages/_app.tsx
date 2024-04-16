@@ -9,7 +9,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ProvideBaseStores>
       <Head>
-        <title>Alien Bets</title>
+        <title>Kombutt</title>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
