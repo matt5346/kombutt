@@ -39,6 +39,7 @@ html {
 #__next {
   @apply w-full lg:w-screen md:h-screen;
   @apply flex flex-col;
+  overflow-x: hidden;
 }
 
 ul li {
