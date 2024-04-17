@@ -102,11 +102,13 @@
   @media (max-width: 1024px) {
     font-size: 48px;
     line-height: 40px;
+    margin-top: 40px;
   }
 
   @media (max-width: 640px) {
     font-size: 32px;
     line-height: 30px;
+    margin-top: 20px;
   }
 }
 
@@ -115,10 +117,11 @@
   max-width: 500px;
   object-fit: contain;
 
-  @media (max-width: 640px) {
+  @media (max-width: 1024px) {
     object-fit: cover;
     max-width: unset;
     height: 100%;
+    max-width: 100%;
     max-height: 300px;
   }
 }
@@ -311,6 +314,18 @@
   }
 }
 
+.topDesc {
+  @apply flex flex-col lg:flex-row items-start gap-12;
+  @media (max-width: 1024px) {
+    margin-bottom: 150px;
+  }
+
+  @media (max-width: 640px) {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+}
+
 .linkItem {
   margin-top: 50px;
 
@@ -403,4 +418,29 @@
   left: 50%;
   border-radius: 0 !important;
   transform: translateX(-50%);
+  animation: shake 3s infinite ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-50%);
+  }
+  4% {
+    transform: translateX(-52%);
+  }
+  8% {
+    transform: translateX(-48%);
+  }
+  12% {
+    transform: translateX(-52%);
+  }
+  16% {
+    transform: translateX(-48%);
+  }
+  20% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

@@ -96,3 +96,12 @@ svg {
 .swiper-linear .swiper-wrapper {
   transition-timing-function: linear;
 }
+
+.middle-slider .swiper-slide {
+  width: 100% !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}

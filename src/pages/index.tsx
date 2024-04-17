@@ -114,7 +114,7 @@ const Home = () => {
         </Button>
       </a>
 
-      <div className="w-full mb-14 lg:mb-40 relative">
+      <div className="w-full mb-30 lg:mb-40 relative">
         <Swiper
           className={classNames(styles.swiperTop, "swiper-linear")}
           slidesPerView="auto"
@@ -161,7 +161,7 @@ const Home = () => {
       )}
 
       <Container>
-        <div className="flex flex-col lg:flex-row items-start gap-12">
+        <div className={styles.topDesc}>
           <h2 className={styles.desc}>
             Kombutt is the son of a koala <Image alt="koala" src={Koala} /> and
             a wombat <Image alt="wombat" src={Wombat} />. With his koala’s calm
@@ -172,6 +172,7 @@ const Home = () => {
             className="middle-slider"
             spaceBetween={20}
             slidesPerView={1}
+            centeredSlides={true}
             pagination={{
               clickable: true
             }}
@@ -235,16 +236,19 @@ const Home = () => {
                       src={_.img}
                     />
                     {key === 1 && (
-                      <Button
-                        onClick={currentSound ? stopSound : playSound}
-                        className={styles.listen}
-                        type="primary"
-                      >
-                        {!currentSound
-                          ? "listen anime opening"
-                          : "stop anime opening"}
-                        <Play className="ml-2" />
-                      </Button>
+                      <div className="relative">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <Button
+                          onClick={currentSound ? stopSound : playSound}
+                          className={styles.listen}
+                          type="primary"
+                        >
+                          {!currentSound
+                            ? "listen anime opening"
+                            : "stop anime opening"}
+                          <Play className="ml-2" />
+                        </Button>
+                      </div>
                     )}
                   </div>
                   <h2 className="mt-10">{_.title}</h2>
