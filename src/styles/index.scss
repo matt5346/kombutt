@@ -61,6 +61,34 @@ svg {
   transition: fill 0.15s ease, transform 0.15s ease;
 }
 
-.swiper {
-  overflow: visible !important;
+// .swiper {
+//   overflow: visible !important;
+// }
+
+.swiper-slide {
+  width: auto !important;
+}
+
+.middle-slider .swiper-button-next:after,
+.middle-slider .swiper-rtl .swiper-button-prev:after {
+  content: "" !important;
+  background-image: url("/next_arr.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 57px;
+  height: 57px;
+  right: 15px;
+  position: relative;
+}
+
+.middle-slider .swiper-button-prev:after,
+.middle-slider .swiper-rtl .swiper-button-next:after {
+  content: "" !important;
+  background-image: url("/prev_arr.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-width: 57px;
+  height: 57px;
+  left: 15px;
+  position: relative;
 }

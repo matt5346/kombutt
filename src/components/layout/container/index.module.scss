@@ -1,7 +1,3 @@
 .main {
   @apply relative z-[100] md:z-10 w-full mx-auto max-w-[1156px] px-4;
-
-  @media (max-width: 640px) {
-    @apply mt-10;
-  }
 }

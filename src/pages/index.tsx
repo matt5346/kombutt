@@ -1,24 +1,42 @@
 /* eslint-disable react/style-prop-object */
 /* eslint-disable jsx-a11y/iframe-has-title */
 import Image from "next/image";
-import styles from "./index.module.scss";
 import Container from "@/components/layout/container";
 import Button from "@/components/button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import styles from "./index.module.scss";
 
 import MainPreview from "@/assets/common/preview_main.png";
+import MainMob from "@/assets/common/preview_mob.png";
+
 import Footer from "@/assets/common/footer.png";
-import Slide from "@/assets/common/slide.png";
+
 import Card1 from "@/assets/common/card1.png";
 import Card2 from "@/assets/common/card2.png";
 import Card3 from "@/assets/common/card3.png";
 import Card4 from "@/assets/common/card4.png";
 
+import MiddleCard1 from "@/assets/common/middleCard1.png";
+import MiddleCard2 from "@/assets/common/middleCard2.png";
+import MiddleCard3 from "@/assets/common/middleCard3.jpg";
+
 import road1 from "@/assets/common/roadmap1.png";
 import road2 from "@/assets/common/roadmap2.png";
 import road3 from "@/assets/common/roadmap1.png";
 import { useState } from "react";
+
+import { Autoplay, Navigation } from "swiper/modules";
+import useDeviceType from "@/hooks/useDeviceType";
+
+const headerSlider = [
+  "Important fact: wombat poop cubes, while Kombutt - hypercubes",
+  "Kombutt is just a mighty mascot in battle armor. Isn’t this enough to join him? It IS enough.",
+  "We promise you Kombutt in every home, airdrops for everyone, and Crypto-Communism for all!"
+];
+
+const middleSlides = [MiddleCard1, MiddleCard2, MiddleCard3];
 
 const roadmapSlider = [
   {
@@ -39,25 +57,51 @@ const roadmapSlider = [
 ];
 
 const Home = () => {
+  const deviceType = useDeviceType();
   const [showWidget, setShowWidget] = useState<boolean>(false);
 
   return (
     <div className="w-full">
-      <div className="w-full mb-40">
+      <div className="w-full mb-40 relative">
+        <Swiper
+          className={styles.swiperTop}
+          slidesPerView="auto"
+          spaceBetween={20}
+          autoplay={{
+            delay: 500,
+            disableOnInteraction: false
+          }}
+          modules={[Autoplay]}
+          speed={25000}
+        >
+          {headerSlider.map((_, key) => (
+            <SwiperSlide key={key}>
+              <span>{_}</span>
+              <span className={styles.star}>✸</span>
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <Container>
           <div className={styles.content}>
             <h1>Choose Your Destiny</h1>
             <p>Join Kombutt in the ultimate crypto combat!</p>
-            <Button
+            <a
               className="mt-10"
-              type="primary"
-              onClick={() => setShowWidget(true)}
+              href="https://web3.world/swap"
+              target="_blank"
+              rel="noreferrer"
             >
-              Get Kombutt
-            </Button>
+              <Button className={styles.btnMain} type="primary">
+                Get Kombutt
+              </Button>
+            </a>
           </div>
         </Container>
-        <Image className={styles.preview} alt="main" src={MainPreview} />
+        <Image
+          className={styles.preview}
+          alt="main"
+          src={deviceType.isDesktop ? MainPreview : MainMob}
+        />
       </div>
 
       {showWidget && (
@@ -74,23 +118,46 @@ const Home = () => {
       )}
 
       <Container>
-        <div className="flex items-start gap-12">
+        <div className="flex flex-col lg:flex-row items-start gap-12">
           <h2 className={styles.desc}>
             Kombutt is the son of a koala and a wombat . With his koala’s calm
             demeanor and a wombat’s tenacity, he swiftly became a legend in the
             blockchain battlegrounds.
           </h2>
-          <Image className={styles.slide} alt="main" src={Slide} />
+          <Swiper
+            className="middle-slider"
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{
+              clickable: true
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false
+            }}
+            navigation={true}
+            modules={[Autoplay, Navigation]}
+          >
+            {middleSlides.map((_, key) => (
+              <SwiperSlide key={key}>
+                <Image
+                  className={styles.middleSlide}
+                  alt={key.toString()}
+                  src={_}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
         <div className={styles.cards}>
-          <div className="relative flex flex-col justify-start items-start max-w-[380px] gap-4 -top-40">
+          <div className={styles.firstCard}>
             <Image className={styles.card1} alt="main" src={Card1} />
             <p className="text-center">
               Important fact: wombat poop cubes, while Kombutt - hypercubes.
             </p>
           </div>
           <Image className={styles.card3} alt="main" src={Card3} />
-          <div className="flex flex-col justify-end items-end max-w-[380px] gap-4 text-end">
+          <div className={styles.lastCard}>
             <Image className={styles.card2} alt="main" src={Card2} />
             <p>
               We promise you Kombutt in every home, airdrops for everyone, and
@@ -110,10 +177,10 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container>
-        <div className={styles.roadmap}>
-          <h1>Fatality Roadmap</h1>
-          <Swiper spaceBetween={20} slidesPerView={2} freeMode>
+      <div className={styles.roadmap}>
+        <h1>Fatality Roadmap</h1>
+        <div className="flex justify-center">
+          <Swiper className="ml-auto" spaceBetween={60} slidesPerView="auto">
             {roadmapSlider.map((_, key) => (
               <SwiperSlide>
                 <div className={styles.slideMain}>
@@ -129,21 +196,18 @@ const Home = () => {
             ))}
           </Swiper>
         </div>
-      </Container>
+      </div>
 
       <div className={styles.footer}>
         <Image className={styles.footerImg} alt="main" src={Footer} />
-
-        <Container>
-          <Button
-            className={styles.getBig}
-            type="primary"
-            onClick={() => setShowWidget(true)}
-          >
-            Get Kombutt
-          </Button>
-        </Container>
-
+        <a
+          href="https://web3.world/swap"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.getBig}
+        >
+          <Button type="primary">Get Kombutt</Button>
+        </a>
         <div className={styles.footerLinks}>
           <Container>
             <div className={styles.linkItem}>

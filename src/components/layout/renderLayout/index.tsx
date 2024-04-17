@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import useWindowSize from "@/hooks/useWindowSize";
+import useWindowSize from "@/hooks/useDeviceType";
 
 import styles from "./index.module.scss";
 import { useRouter } from "next/router";

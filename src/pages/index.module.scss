@@ -3,6 +3,14 @@
   height: 100vh;
   object-fit: fill;
   object-position: top;
+
+  @media (max-width: 640px) {
+    object-fit: contain;
+  }
+
+  @media (max-width: 1024px) {
+    object-fit: cover;
+  }
 }
 
 .content {
@@ -19,7 +27,7 @@
   justify-content: center;
   text-align: center;
 
-  button {
+  a {
     position: absolute;
     bottom: 50px;
   }
@@ -37,6 +45,39 @@
     color: #fff;
     max-width: 500px;
   }
+
+  @media (max-width: 1024px) {
+    height: 60vh;
+
+    h1 {
+      font-size: 80px;
+      line-height: 60px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    height: 100vh;
+
+    .btnMain {
+      min-width: 210px;
+    }
+
+    h1 {
+      margin-top: 100px;
+      font-size: 64px;
+      line-height: 64px;
+    }
+
+    p {
+      margin-bottom: auto;
+      font-size: 24px;
+      padding: 0 10px;
+    }
+
+    a {
+      bottom: 150px;
+    }
+  }
 }
 
 .desc {
@@ -45,9 +86,21 @@
   font-weight: 500;
   color: #0a0a0a;
   max-width: 580px;
+
+  @media (max-width: 1024px) {
+    font-size: 48px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 30px;
+  }
 }
 
-.slide {
+.middleSlide {
+  width: 100%;
+  max-width: 500px;
   object-fit: contain;
 }
 
@@ -58,6 +111,33 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 20px;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 100px;
+    flex-direction: column;
+  }
+}
+
+.firstCard {
+  @apply relative flex flex-col justify-start items-start max-w-[380px] gap-4 -top-40;
+
+  @media (max-width: 640px) {
+    top: 0;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.lastCard {
+  @apply flex flex-col justify-end items-end max-w-[380px] gap-4 text-end;
+
+  @media (max-width: 640px) {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
   }
 }
 
@@ -93,10 +173,30 @@
     margin-bottom: 200px;
     line-height: 150px;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 140px;
+    margin-top: 200px;
+
+    h1 {
+      margin-bottom: 150px;
+      line-height: 120px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    font-size: 64px;
+    margin-top: 100px;
+
+    h1 {
+      margin-bottom: 50px;
+      line-height: 80px;
+    }
+  }
 }
 
 .slideMain {
-  @apply flex flex-col items-center justify-center min-w-[250px] min-h-[600px];
+  @apply flex flex-col items-center justify-center w-full max-w-[400px] min-h-[600px];
 
   h2 {
     font-size: 40px;
@@ -112,11 +212,28 @@
     text-align: center;
     line-height: 24px;
   }
+
+  @media (max-width: 640px) {
+    min-height: unset;
+
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
 }
 
 .footer {
   @apply mt-20 relative;
   width: 100%;
+
+  @media (max-width: 640px) {
+    min-height: 60vh;
+  }
 }
 
 .footerImg {
@@ -124,6 +241,11 @@
   height: 100%;
   object-fit: contain;
   z-index: -1;
+
+  @media (max-width: 640px) {
+    position: absolute;
+    object-fit: cover;
+  }
 }
 
 .footerLinks {
@@ -153,6 +275,17 @@
 
     &:hover {
       text-decoration: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    span {
+      font-size: 18px;
     }
   }
 }
@@ -190,11 +323,46 @@
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw !important;
-  height: 250px !important;
-  font-size: 120px !important;
-  font-weight: 700;
-  line-height: 100px;
-  border-radius: 1000px !important;
-  white-space: nowrap;
+
+  button {
+    width: 90vw !important;
+    height: 250px !important;
+    font-size: 120px !important;
+    font-weight: 700;
+    line-height: 100px;
+    border-radius: 1000px !important;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 1024px) {
+    button {
+      font-size: 32px !important;
+      height: 72px !important;
+      width: 40vw !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    button {
+      font-size: 18px !important;
+      height: 72px !important;
+      width: 50vw !important;
+    }
+  }
+}
+
+.swiperTop {
+  background-color: #e24146;
+  padding: 5px 0;
+
+  span {
+    font-size: 14px;
+    font-size: 600;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+.star {
+  margin: 0 10px 0 30px;
 }
