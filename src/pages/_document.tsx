@@ -30,35 +30,41 @@ export default function Document() {
           color="#5bbad5"
         /> */}
         <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="application-name" content="BitRuby" />
-
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_PROD_URL} />
+        <meta name="application-name" content="Kombutt" />
+        <meta property="og:url" content="https://kombutt.wtf" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Alien" />
-        <meta property="og:site_name" content="Alien" />
-        <meta property="og:description" content="Alien bets on web3" />
-        {/* <meta property="og:image" content="/images/preview_link.png" />
-        <meta property="og:image:width" content="1330" />
-        <meta property="og:image:height" content="666" /> */}
+        <meta property="og:title" content="Kombutt" />
+        <meta property="og:site_name" content="Kombutt" />
+        <meta
+          property="og:description"
+          content="Join Kombutt in the ultimate crypto combat!"
+        />
+        <meta property="og:image" content="https://kombutt.wtf/meta-img.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="631" />
 
         <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="https://kombutt.wtf" />
+        <meta property="twitter:url" content="https://kombutt.wtf" />
+        <meta name="twitter:title" content="Kombutt" />
         <meta
-          property="twitter:domain"
-          content={process.env.NEXT_PUBLIC_PROD_URL}
+          name="twitter:description"
+          content="Join Kombutt in the ultimate crypto combat!"
         />
-        <meta
-          property="twitter:url"
-          content={process.env.NEXT_PUBLIC_PROD_URL}
+        <meta name="twitter:image" content="https://kombutt.wtf/meta-img.png" />
+
+        <link
+          rel="icon"
+          href="https://kombutt.wtf/favicon.png"
+          type="image/png"
+          sizes="any"
         />
-        <meta name="twitter:title" content="Alien bets" />
-        <meta name="twitter:description" content="Alien bets" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:wght@400;500;700;800&family=Red+Hat+Display:wght@400;500;600;700&family=Ubuntu:wght@300;400;700&display=swap"
           rel="stylesheet"
         />
-        {/* <meta name="twitter:image" content="/images/preview_link.png" /> */}
       </Head>
 
       <body className="theme-black">
