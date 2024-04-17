@@ -94,7 +94,7 @@ const Home = () => {
         </Swiper>
         <Container>
           <div className={styles.content}>
-            <h1>Choose Your Destiny</h1>
+            <h1>Choose Your Destiny!</h1>
             <p>Join Kombutt in the ultimate crypto combat!</p>
           </div>
         </Container>
