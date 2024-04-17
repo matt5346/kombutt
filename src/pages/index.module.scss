@@ -92,6 +92,13 @@
   color: #0a0a0a;
   max-width: 580px;
 
+  img {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+  }
+
   @media (max-width: 1024px) {
     font-size: 48px;
     line-height: 40px;

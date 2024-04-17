@@ -18,6 +18,9 @@ import Card2 from "@/assets/common/card2.png";
 import Card3 from "@/assets/common/card3.png";
 import Card4 from "@/assets/common/card4.png";
 
+import Koala from "@/assets/common/koala.png";
+import Wombat from "@/assets/common/wombat.png";
+
 import Play from "@/assets/common/play.svg";
 
 import MiddleCard1 from "@/assets/common/middleCard1.png";
@@ -144,7 +147,8 @@ const Home = () => {
       <Container>
         <div className="flex flex-col lg:flex-row items-start gap-12">
           <h2 className={styles.desc}>
-            Kombutt is the son of a koala and a wombat . With his koala’s calm
+            Kombutt is the son of a koala <Image alt="koala" src={Koala} /> and
+            a wombat <Image alt="wombat" src={Wombat} />. With his koala’s calm
             demeanor and a wombat’s tenacity, he swiftly became a legend in the
             blockchain battlegrounds.
           </h2>
