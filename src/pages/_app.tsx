@@ -21,7 +21,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta property="og:site_name" content="Kombutt" />
         <meta
           property="og:description"
-          content="Kombutt.io - Join Kombutt in the ultimate crypto combat!"
+          content="Join Kombutt in the ultimate crypto combat!"
         />
         <meta property="og:image" content="https://kombutt.wtf/meta-img.png" />
         <meta property="og:image:width" content="1200" />
@@ -33,9 +33,16 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="twitter:title" content="Kombutt" />
         <meta
           name="twitter:description"
-          content="Kombutt.io - Join Kombutt in the ultimate crypto combat!"
+          content="Join Kombutt in the ultimate crypto combat!"
         />
         <meta name="twitter:image" content="https://kombutt.wtf/meta-img.png" />
+
+        <link
+          rel="icon"
+          href="https://kombutt.wtf/favicon.png"
+          type="image/png"
+          sizes="any"
+        />
       </Head>
 
       <RenderLayout>
