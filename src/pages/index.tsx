@@ -224,7 +224,7 @@ const Home = () => {
 
       <div className={styles.roadmap}>
         <h1>Fatality Roadmap</h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center px-4 sm:px-0">
           <Swiper className="ml-auto" spaceBetween={60} slidesPerView="auto">
             {roadmapSlider.map((_, key) => (
               <SwiperSlide>
