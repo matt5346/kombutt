@@ -62,6 +62,17 @@ const Home = () => {
 
   return (
     <div className="w-full">
+      <a
+        href="https://web3.world/swap"
+        target="_blank"
+        rel="noreferrer"
+        className={styles.fixedlink}
+      >
+        <Button className={styles.btnMain} type="primary">
+          Get Kombutt
+        </Button>
+      </a>
+
       <div className="w-full mb-40 relative">
         <Swiper
           className={styles.swiperTop}
@@ -85,16 +96,6 @@ const Home = () => {
           <div className={styles.content}>
             <h1>Choose Your Destiny</h1>
             <p>Join Kombutt in the ultimate crypto combat!</p>
-            <a
-              className="mt-10"
-              href="https://web3.world/swap"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Button className={styles.btnMain} type="primary">
-                Get Kombutt
-              </Button>
-            </a>
           </div>
         </Container>
         <Image

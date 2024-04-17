@@ -27,11 +27,6 @@
   justify-content: center;
   text-align: center;
 
-  a {
-    position: absolute;
-    bottom: 50px;
-  }
-
   h1 {
     font-weight: 700;
     font-size: 120px;
@@ -58,10 +53,6 @@
   @media (max-width: 640px) {
     height: 100vh;
 
-    .btnMain {
-      min-width: 210px;
-    }
-
     h1 {
       margin-top: 100px;
       font-size: 64px;
@@ -78,6 +69,20 @@
       bottom: 150px;
     }
   }
+}
+
+.btnMain {
+  @media (max-width: 640px) {
+    min-width: 210px;
+  }
+}
+
+.fixedlink {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+  z-index: 200;
 }
 
 .desc {
@@ -102,6 +107,10 @@
   width: 100%;
   max-width: 500px;
   object-fit: contain;
+
+  @media (max-width: 640px) {
+    max-width: 250px;
+  }
 }
 
 .cards {
@@ -230,9 +239,10 @@
 .footer {
   @apply mt-20 relative;
   width: 100%;
+  z-index: 201;
 
   @media (max-width: 640px) {
-    min-height: 60vh;
+    min-height: 80vh;
   }
 }
 
