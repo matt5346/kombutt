@@ -305,6 +305,10 @@
 
 .linkItem {
   margin-top: 50px;
+
+  @media (max-width: 640px) {
+    margin-top: 20px;
+  }
 }
 
 .iframe {
