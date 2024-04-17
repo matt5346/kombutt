@@ -1,0 +1,5 @@
+services:
+  kombutt-web:
+    image: kombutt:latest
+    ports:
+      - 127.0.0.1:3000:3000
