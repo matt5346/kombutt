@@ -236,6 +236,11 @@
     min-height: 80px;
   }
 
+  img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+
   @media (max-width: 640px) {
     min-height: unset;
 
