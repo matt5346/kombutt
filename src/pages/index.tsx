@@ -286,16 +286,13 @@ const Home = () => {
               <h2>root-contract:</h2>
               <div className="flex justify-center items-center gap-2 mt-2">
                 <span>1.</span>
-                <a target="_blank" className="link" href="test">
-                  link
-                </a>
-              </div>
-            </div>
-            <div className={styles.linkItem}>
-              <h2>venom-scan:</h2>
-              <div className="flex justify-center items-center gap-2 mt-2 mt-2">
-                <span>1.</span>
-                <a target="_blank" className="link" href="test">
+                <a
+                  target="_blank"
+                  className="link"
+                  href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
+"
+                  rel="noreferrer"
+                >
                   link
                 </a>
               </div>
