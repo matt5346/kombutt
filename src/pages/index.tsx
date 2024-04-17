@@ -29,6 +29,7 @@ import { useState } from "react";
 
 import { Autoplay, Navigation } from "swiper/modules";
 import useDeviceType from "@/hooks/useDeviceType";
+import classNames from "classnames";
 
 const headerSlider = [
   "Important fact: wombat poop cubes, while Kombutt - hypercubes",
@@ -75,15 +76,16 @@ const Home = () => {
 
       <div className="w-full mb-40 relative">
         <Swiper
-          className={styles.swiperTop}
+          className={classNames(styles.swiperTop, "swiper-linear")}
           slidesPerView="auto"
           spaceBetween={20}
           autoplay={{
-            delay: 500,
+            delay: 0,
             disableOnInteraction: false
           }}
+          loop
           modules={[Autoplay]}
-          speed={25000}
+          speed={10000}
         >
           {headerSlider.map((_, key) => (
             <SwiperSlide key={key}>

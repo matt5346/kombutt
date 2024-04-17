@@ -92,3 +92,7 @@ svg {
   left: 15px;
   position: relative;
 }
+
+.swiper-linear .swiper-wrapper {
+  transition-timing-function: linear;
+}
