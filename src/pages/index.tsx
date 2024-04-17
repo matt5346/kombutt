@@ -26,6 +26,8 @@ import Play from "@/assets/common/play.svg";
 import MiddleCard1 from "@/assets/common/middleCard1.png";
 import MiddleCard2 from "@/assets/common/middleCard2.png";
 import MiddleCard3 from "@/assets/common/middleCard3.jpg";
+import MiddleCard4 from "@/assets/common/middleCard4.png";
+import MiddleCard5 from "@/assets/common/middleCard5.png";
 
 import road1 from "@/assets/common/roadmap1.png";
 import road2 from "@/assets/common/roadmap2.png";
@@ -44,7 +46,13 @@ const headerSlider = [
   "We promise you Kombutt in every home, airdrops for everyone, and Crypto-Communism for all!"
 ];
 
-const middleSlides = [MiddleCard1, MiddleCard2, MiddleCard3];
+const middleSlides = [
+  MiddleCard1,
+  MiddleCard2,
+  MiddleCard3,
+  MiddleCard4,
+  MiddleCard5
+];
 
 const roadmapSlider = [
   {
@@ -77,12 +85,20 @@ const roadmapSlider = [
 const Home = () => {
   const deviceType = useDeviceType();
   const [showWidget, setShowWidget] = useState<boolean>(false);
+  const [currentSound, setSound] = useState<any>(null);
 
   const playSound = () => {
     const sound = new Audio(`/kombutt.mp3`);
     sound.currentTime = 0;
     sound.volume = 0.5;
     sound.play();
+    setSound(sound);
+  };
+
+  const stopSound = () => {
+    currentSound.volume = 0;
+    currentSound.pause();
+    setSound(null);
   };
 
   return (
@@ -220,11 +236,13 @@ const Home = () => {
                     />
                     {key === 1 && (
                       <Button
-                        onClick={playSound}
+                        onClick={currentSound ? stopSound : playSound}
                         className={styles.listen}
                         type="primary"
                       >
-                        listen anime opening
+                        {!currentSound
+                          ? "listen anime opening"
+                          : "stop anime opening"}
                         <Play className="ml-2" />
                       </Button>
                     )}
