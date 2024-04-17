@@ -81,7 +81,7 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 100px;
+  bottom: 50px;
   z-index: 200;
 }
 
@@ -383,4 +383,17 @@
 
 .star {
   margin: 0 10px 0 30px;
+}
+
+.slideMain {
+  position: relative;
+}
+
+.listen {
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  border-radius: 0 !important;
+  transform: translateX(-50%);
 }

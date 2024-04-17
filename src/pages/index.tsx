@@ -18,13 +18,17 @@ import Card2 from "@/assets/common/card2.png";
 import Card3 from "@/assets/common/card3.png";
 import Card4 from "@/assets/common/card4.png";
 
+import Play from "@/assets/common/play.svg";
+
 import MiddleCard1 from "@/assets/common/middleCard1.png";
 import MiddleCard2 from "@/assets/common/middleCard2.png";
 import MiddleCard3 from "@/assets/common/middleCard3.jpg";
 
 import road1 from "@/assets/common/roadmap1.png";
 import road2 from "@/assets/common/roadmap2.png";
-import road3 from "@/assets/common/roadmap1.png";
+import road3 from "@/assets/common/roadmap5.png";
+import road4 from "@/assets/common/roadmap3.png";
+import road5 from "@/assets/common/roadmap4.png";
 import { useState } from "react";
 
 import { Autoplay, Navigation } from "swiper/modules";
@@ -47,19 +51,36 @@ const roadmapSlider = [
   },
   {
     img: road2,
-    text: "The Kombutt Manga with epic tales for the top-50 token holders!",
+    text: "Q3 2024: The Kombutt Manga with epic tales for the top-50 token holders!",
     title: "Q3 2024"
   },
   {
     img: road3,
-    text: "Top-100 token holders will get their very own Kombutt via the Kombutt Generator!",
+    text: "Q4 2024: Kombutt Combat Web3 Game! Get your Kombutt and win the battle.",
     title: "Q4 2024"
+  },
+  {
+    img: road5,
+    text: "Q3 1969: Kombutt conquers the moon!",
+    title: "Q3 1969"
+  },
+  {
+    img: road4,
+    text: "Q3 2025: Kombutt Wins!",
+    title: "Q3 2025"
   }
 ];
 
 const Home = () => {
   const deviceType = useDeviceType();
   const [showWidget, setShowWidget] = useState<boolean>(false);
+
+  const playSound = () => {
+    const sound = new Audio(`/kombutt.mp3`);
+    sound.currentTime = 0;
+    sound.volume = 0.5;
+    sound.play();
+  };
 
   return (
     <div className="w-full">
@@ -187,11 +208,23 @@ const Home = () => {
             {roadmapSlider.map((_, key) => (
               <SwiperSlide>
                 <div className={styles.slideMain}>
-                  <Image
-                    className={key === 1 ? "bg-black" : ""}
-                    alt={_.title}
-                    src={_.img}
-                  />
+                  <div className="relative">
+                    <Image
+                      className={key === 1 ? "bg-black" : ""}
+                      alt={_.title}
+                      src={_.img}
+                    />
+                    {key === 1 && (
+                      <Button
+                        onClick={playSound}
+                        className={styles.listen}
+                        type="primary"
+                      >
+                        listen anime opening
+                        <Play className="ml-2" />
+                      </Button>
+                    )}
+                  </div>
                   <h2 className="mt-10">{_.title}</h2>
                   <p>{_.text}</p>
                 </div>
@@ -217,7 +250,12 @@ const Home = () => {
               <h2>social links:</h2>
               <div className="flex justify-center items-center gap-2 mt-2">
                 <span>1.</span>
-                <a target="_blank" className="link" href="test">
+                <a
+                  target="_blank"
+                  className="link"
+                  href="https://t.me/kombutt"
+                  rel="noreferrer"
+                >
                   telegram
                 </a>
               </div>

@@ -37,10 +37,6 @@
   height: 56px;
 }
 
-.button:active {
-  transform: scale(0.98);
-}
-
 .button:disabled {
   pointer-events: none;
   @apply opacity-60;
