@@ -74,7 +74,7 @@ const Home = () => {
         </Button>
       </a>
 
-      <div className="w-full mb-40 relative">
+      <div className="w-full mb-14 lg:mb-40 relative">
         <Swiper
           className={classNames(styles.swiperTop, "swiper-linear")}
           slidesPerView="auto"
