@@ -93,11 +93,20 @@ svg {
   position: relative;
 }
 
+.bottom-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .swiper-linear .swiper-wrapper {
   transition-timing-function: linear;
 }
 
 .middle-slider .swiper-slide {
+  width: 100% !important;
+}
+.bottom-slider .swiper-slide {
   width: 100% !important;
 }
 

@@ -30,7 +30,7 @@ import MiddleCard4 from "@/assets/common/middleCard4.png";
 import MiddleCard5 from "@/assets/common/middleCard5.png";
 
 import road1 from "@/assets/common/roadmap1.png";
-import road2 from "@/assets/common/roadmap2.png";
+import road2 from "@/assets/common/roadmap2.jpg";
 import road3 from "@/assets/common/roadmap5.png";
 import road4 from "@/assets/common/roadmap3.png";
 import road5 from "@/assets/common/roadmap4.png";
@@ -104,7 +104,7 @@ const Home = () => {
   return (
     <div className="w-full">
       <a
-        href="https://web3.world/swap"
+        href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
         target="_blank"
         rel="noreferrer"
         className={styles.fixedlink}
@@ -224,8 +224,8 @@ const Home = () => {
 
       <div className={styles.roadmap}>
         <h1>Fatality Roadmap</h1>
-        <div className="flex justify-center px-4 sm:px-0">
-          <Swiper className="ml-auto" spaceBetween={60} slidesPerView="auto">
+        <Container className="flex justify-center px-4 sm:px-0">
+          <Swiper className="ml-auto" spaceBetween={40} slidesPerView="auto">
             {roadmapSlider.map((_, key) => (
               <SwiperSlide>
                 <div className={styles.slideMain}>
@@ -257,13 +257,13 @@ const Home = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </Container>
       </div>
 
       <div className={styles.footer}>
         <Image className={styles.footerImg} alt="main" src={Footer} />
         <a
-          href="https://web3.world/swap"
+          href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
           target="_blank"
           rel="noreferrer"
           className={styles.getBig}

@@ -218,13 +218,14 @@
 }
 
 .slideMain {
-  @apply flex flex-col items-center justify-center w-full max-w-[400px] min-h-[600px];
+  @apply flex flex-col items-center justify-center w-full min-h-[600px] max-w-[400px];
 
   h2 {
     font-size: 40px;
     line-height: 36px;
     font-weight: 700;
     margin-top: auto;
+    margin-top: 20px;
   }
 
   p {
@@ -237,8 +238,9 @@
   }
 
   img {
-    max-height: 400px;
     object-fit: cover;
+    max-height: 400px;
+    max-width: 400px;
   }
 
   @media (max-width: 640px) {
@@ -370,7 +372,7 @@
   transform: translateX(-50%);
 
   button {
-    width: 90vw !important;
+    width: 70vw !important;
     height: 250px !important;
     font-size: 120px !important;
     font-weight: 700;
