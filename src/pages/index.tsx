@@ -313,8 +313,7 @@ const Home = () => {
                     <a
                       target="_blank"
                       className="link"
-                      href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
-"
+                      href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
                       rel="noreferrer"
                     >
                       buy on web3world
