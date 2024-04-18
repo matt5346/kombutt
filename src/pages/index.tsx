@@ -103,16 +103,17 @@ const Home = () => {
 
   return (
     <div className="w-full">
-      <a
-        href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
-        target="_blank"
-        rel="noreferrer"
-        className={styles.fixedlink}
+      <Button
+        onClick={() => {
+          const scrollingElement = document.querySelector("footer");
+          if (!scrollingElement) return;
+          scrollingElement.scrollIntoView({ behavior: "smooth" });
+        }}
+        className={classNames(styles.fixedlink, styles.btnMain)}
+        type="primary"
       >
-        <Button className={styles.btnMain} type="primary">
-          Get Kombutt
-        </Button>
-      </a>
+        Get Kombutt
+      </Button>
 
       <div className="w-full mb-30 lg:mb-40 relative">
         <Swiper
@@ -260,8 +261,10 @@ const Home = () => {
         </Container>
       </div>
 
-      <div className={styles.footer}>
-        <Image className={styles.footerImg} alt="main" src={Footer} />
+      <footer className={styles.footer}>
+        <div className={styles.footerImgWrap}>
+          <Image className={styles.footerImg} alt="main" src={Footer} />
+        </div>
         <a
           href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
           target="_blank"
@@ -272,38 +275,65 @@ const Home = () => {
         </a>
         <div className={styles.footerLinks}>
           <Container>
-            <div className={styles.linkItem}>
-              <h2>social links:</h2>
-              <div className="flex justify-center items-center gap-2 mt-2">
-                <span>1.</span>
-                <a
-                  target="_blank"
-                  className="link"
-                  href="https://t.me/kombutt"
-                  rel="noreferrer"
-                >
-                  telegram
-                </a>
-              </div>
-            </div>
-            <div className={styles.linkItem}>
-              <h2>root-contract:</h2>
-              <div className="flex justify-center items-center gap-2 mt-2">
-                <span>1.</span>
-                <a
-                  target="_blank"
-                  className="link"
-                  href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
+            <div className={styles.footerFrameWrap}>
+              <div>
+                <div className={styles.linkItem}>
+                  <h2>social links:</h2>
+                  <div className="flex justify-center items-center gap-2 mt-2">
+                    <span>1.</span>
+                    <a
+                      target="_blank"
+                      className="link"
+                      href="https://t.me/kombutt"
+                      rel="noreferrer"
+                    >
+                      telegram
+                    </a>
+                  </div>
+                </div>
+                <div className={styles.linkItem}>
+                  <h2>root-contract:</h2>
+                  <div className="flex justify-center items-center gap-2 mt-2">
+                    <span>1.</span>
+                    <a
+                      target="_blank"
+                      className="link"
+                      href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
 "
-                  rel="noreferrer"
-                >
-                  link
-                </a>
+                      rel="noreferrer"
+                    >
+                      link
+                    </a>
+                  </div>
+                </div>
+                <div className={styles.linkItem}>
+                  <h2>get kombutt:</h2>
+                  <div className="flex justify-center items-center gap-2 mt-2">
+                    <span>1.</span>
+                    <a
+                      target="_blank"
+                      className="link"
+                      href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
+"
+                      rel="noreferrer"
+                    >
+                      buy on web3world
+                    </a>
+                  </div>
+                  <div className={styles.bridged}>
+                    <span>2.</span>
+                    <div className={styles.linkStyle}>
+                      bridge from EVM wallet
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <iframe src="https://widget.venombridge.com/widget.html?token=0%3Ae6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"></iframe>
             </div>
           </Container>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };

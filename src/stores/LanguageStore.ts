@@ -7,7 +7,7 @@ export type Language = {
   label: string;
 };
 
-const langKey = "alien_bets.language";
+const langKey = "kombutt.language";
 
 export const availableLanguages: Language[] = [
   {
