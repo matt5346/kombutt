@@ -290,6 +290,17 @@ const Home = () => {
                       telegram
                     </a>
                   </div>
+                  <div className="flex justify-center items-center gap-2 mt-2">
+                    <span>1.</span>
+                    <a
+                      target="_blank"
+                      className="link"
+                      href="https://twitter.com/kombutt"
+                      rel="noreferrer"
+                    >
+                      twitter
+                    </a>
+                  </div>
                 </div>
                 <div className={styles.linkItem}>
                   <h2>root-contract:</h2>
