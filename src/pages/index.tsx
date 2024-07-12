@@ -295,7 +295,7 @@ const Home = () => {
                     <a
                       target="_blank"
                       className="link"
-                      href="https://twitter.com/kombutt"
+                      href="https://x.com/cedroweb30"
                       rel="noreferrer"
                     >
                       twitter
