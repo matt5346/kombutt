@@ -292,7 +292,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className={styles.linkItem}>
-                  <h2>NFT collection:</h2>
+                  <h2>NFT:</h2>
                   <div className="flex justify-center items-center gap-2 mt-2">
                     <span>1.</span>
                     <a
