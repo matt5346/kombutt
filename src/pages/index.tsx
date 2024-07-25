@@ -284,23 +284,24 @@ const Home = () => {
                     <a
                       target="_blank"
                       className="link"
-                      href="https://oasis.gallery/collection/0:8d50938251f2f7bd75780c6814aa7fefd305ebdecd5132083134d0f4e37c1bb0"
-                      rel="noreferrer"
-                    >
-                      NFT collections
-                    </a>
-                  </div>
-                  <div className="flex justify-center items-center gap-2 mt-2">
-                    <span>2.</span>
-                    <a
-                      target="_blank"
-                      className="link"
                       href="https://x.com/cedroweb30"
                       rel="noreferrer"
                     >
                       twitter
                     </a>
                   </div>
+                </div>
+                <h2>NFT collection:</h2>
+                <div className="flex justify-center items-center gap-2 mt-2">
+                  <span>1.</span>
+                  <a
+                    target="_blank"
+                    className="link"
+                    href="https://oasis.gallery/collection/0:8d50938251f2f7bd75780c6814aa7fefd305ebdecd5132083134d0f4e37c1bb0"
+                    rel="noreferrer"
+                  >
+                    NFT collections
+                  </a>
                 </div>
                 <div className={styles.linkItem}>
                   <h2>root-contract:</h2>
