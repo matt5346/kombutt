@@ -284,10 +284,10 @@ const Home = () => {
                     <a
                       target="_blank"
                       className="link"
-                      href="https://t.me/kombutt"
+                      href="https://oasis.gallery/collection/0:8d50938251f2f7bd75780c6814aa7fefd305ebdecd5132083134d0f4e37c1bb0"
                       rel="noreferrer"
                     >
-                      telegram
+                      NFT collections
                     </a>
                   </div>
                   <div className="flex justify-center items-center gap-2 mt-2">
