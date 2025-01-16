@@ -266,7 +266,7 @@
   min-height: 240vh;
 
   @media (max-width: 1024px) {
-    min-height: 180vh;
+    min-height: 140vh;
   }
 
   @media (max-width: 640px) {
@@ -492,6 +492,13 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 0 auto;
 }
 
 .footerFrameWrap {

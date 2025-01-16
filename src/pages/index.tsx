@@ -14,7 +14,6 @@ import MainMob from "@/assets/common/preview_mob.png";
 import Footer from "@/assets/common/footer.png";
 
 import Card1 from "@/assets/common/card1.png";
-import Card2 from "@/assets/common/card2.png";
 import Card3 from "@/assets/common/card3.png";
 import Card4 from "@/assets/common/card4.png";
 
@@ -42,8 +41,7 @@ import classNames from "classnames";
 
 const headerSlider = [
   "Important fact: wombat poop cubes, while Kombutt - hypercubes",
-  "Kombutt is just a mighty mascot in battle armor. Isn’t this enough to join him? It IS enough.",
-  "We promise you Kombutt in every home, airdrops for everyone, and Crypto-Communism for all!"
+  "Kombutt is just a mighty mascot in battle armor. Isn’t this enough to join him? It IS enough."
 ];
 
 const middleSlides = [
@@ -63,12 +61,12 @@ const roadmapSlider = [
   {
     img: road2,
     text: "Q3 2024: The Kombutt Manga with epic tales for the top-50 token holders!",
-    title: "Q3 2024"
+    title: "Q2 2025"
   },
   {
     img: road3,
     text: "Q4 2024: Kombutt Combat Web3 Game! Get your Kombutt and win the battle.",
-    title: "Q4 2024"
+    title: "Q4 2025"
   },
   {
     img: road5,
@@ -78,7 +76,7 @@ const roadmapSlider = [
   {
     img: road4,
     text: "Q3 2025: Kombutt Wins!",
-    title: "Q3 2025"
+    title: "Q4 2025"
   }
 ];
 
@@ -203,13 +201,6 @@ const Home = () => {
             </p>
           </div>
           <Image className={styles.card3} alt="main" src={Card3} />
-          <div className={styles.lastCard}>
-            <Image className={styles.card2} alt="main" src={Card2} />
-            <p>
-              We promise you Kombutt in every home, airdrops for everyone, and
-              Crypto-Communism for all!
-            </p>
-          </div>
         </div>
       </Container>
 
@@ -266,7 +257,7 @@ const Home = () => {
           <Image className={styles.footerImg} alt="main" src={Footer} />
         </div>
         <a
-          href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
+          href="https://web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
           target="_blank"
           rel="noreferrer"
           className={styles.getBig}
@@ -276,18 +267,18 @@ const Home = () => {
         <div className={styles.footerLinks}>
           <Container>
             <div className={styles.footerFrameWrap}>
-              <div>
+              <div className={styles.footerCol}>
                 <div className={styles.linkItem}>
-                  <h2>social links:</h2>
+                  <h2>get kombutt:</h2>
                   <div className="flex justify-center items-center gap-2 mt-2">
                     <span>1.</span>
                     <a
                       target="_blank"
                       className="link"
-                      href="https://x.com/cedroweb30"
+                      href="https://web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
                       rel="noreferrer"
                     >
-                      twitter
+                      buy on web3world
                     </a>
                   </div>
                 </div>
@@ -301,7 +292,21 @@ const Home = () => {
                       href="https://oasis.gallery/collection/0:8d50938251f2f7bd75780c6814aa7fefd305ebdecd5132083134d0f4e37c1bb0"
                       rel="noreferrer"
                     >
-                      NFT collections
+                      Kombutt universe
+                    </a>
+                  </div>
+                </div>
+                <div className={styles.linkItem}>
+                  <h2>NFT club:</h2>
+                  <div className="flex justify-center items-center gap-2 mt-2">
+                    <span>1.</span>
+                    <a
+                      target="_blank"
+                      className="link"
+                      href="https://chums.chat/#/!OmMDkvwDmcLWfQUCxb:venom.fan?via=venom.fan"
+                      rel="noreferrer"
+                    >
+                      NFT club
                     </a>
                   </div>
                 </div>
@@ -312,37 +317,14 @@ const Home = () => {
                     <a
                       target="_blank"
                       className="link"
-                      href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c 
-"
+                      href="https://venomscan.com/accounts/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
                       rel="noreferrer"
                     >
                       link
                     </a>
                   </div>
                 </div>
-                <div className={styles.linkItem}>
-                  <h2>get kombutt:</h2>
-                  <div className="flex justify-center items-center gap-2 mt-2">
-                    <span>1.</span>
-                    <a
-                      target="_blank"
-                      className="link"
-                      href="https://tokenforge.web3.world/swap/coin/0:e6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"
-                      rel="noreferrer"
-                    >
-                      buy on web3world
-                    </a>
-                  </div>
-                  <div className={styles.bridged}>
-                    <span>2.</span>
-                    <div className={styles.linkStyle}>
-                      bridge from EVM wallet
-                    </div>
-                  </div>
-                </div>
               </div>
-
-              <iframe src="https://widget.venombridge.com/widget.html?token=0%3Ae6a2ced860ba3e430d9649ff8d434bd91b40a0baab53fd8c3b86ed904c5d103c"></iframe>
             </div>
           </Container>
         </div>
