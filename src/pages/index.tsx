@@ -39,10 +39,10 @@ import { Autoplay, Navigation } from "swiper/modules";
 import useDeviceType from "@/hooks/useDeviceType";
 import classNames from "classnames";
 
-const headerSlider = [
-  "Important fact: wombat poop cubes, while Kombutt - hypercubes",
-  "Kombutt is just a mighty mascot in battle armor. Isn’t this enough to join him? It IS enough."
-];
+// const headerSlider = [
+//   "Important fact: wombat poop cubes, while Kombutt - hypercubes",
+//   "Kombutt is just a mighty mascot in battle armor. Isn’t this enough to join him? It IS enough."
+// ];
 
 const middleSlides = [
   MiddleCard1,
@@ -60,12 +60,12 @@ const roadmapSlider = [
   },
   {
     img: road2,
-    text: "Q3 2024: The Kombutt Manga with epic tales for the top-50 token holders!",
+    text: "Q2 2025: The Kombutt Manga with epic tales for the top-50 token holders!",
     title: "Q2 2025"
   },
   {
     img: road3,
-    text: "Q4 2024: Kombutt Combat Web3 Game! Get your Kombutt and win the battle.",
+    text: "Q4 2025: Kombutt Combat Web3 Game! Get your Kombutt and win the battle.",
     title: "Q4 2025"
   },
   {
@@ -75,7 +75,7 @@ const roadmapSlider = [
   },
   {
     img: road4,
-    text: "Q3 2025: Kombutt Wins!",
+    text: "Q4 2025: Kombutt Wins!",
     title: "Q4 2025"
   }
 ];
@@ -114,7 +114,7 @@ const Home = () => {
       </Button>
 
       <div className="w-full mb-30 lg:mb-40 relative">
-        <Swiper
+        {/* <Swiper
           className={classNames(styles.swiperTop, "swiper-linear")}
           slidesPerView="auto"
           spaceBetween={20}
@@ -132,7 +132,7 @@ const Home = () => {
               <span className={styles.star}>✸</span>
             </SwiperSlide>
           ))}
-        </Swiper>
+        </Swiper> */}
         <Container>
           <div className={styles.content}>
             <h1>Choose Your Destiny!</h1>
@@ -292,7 +292,7 @@ const Home = () => {
                       href="https://oasis.gallery/collection/0:8d50938251f2f7bd75780c6814aa7fefd305ebdecd5132083134d0f4e37c1bb0"
                       rel="noreferrer"
                     >
-                      Kombutt universe
+                      kombutt universe
                     </a>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ const Home = () => {
                       href="https://chums.chat/#/!OmMDkvwDmcLWfQUCxb:venom.fan?via=venom.fan"
                       rel="noreferrer"
                     >
-                      NFT club
+                      private room in Chums
                     </a>
                   </div>
                 </div>
